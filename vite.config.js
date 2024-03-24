@@ -12,7 +12,7 @@ const inputs = paths.reduce((acc, cur) => {
 // vite.config.js
 export default {
   root: path.resolve(dirname, "src"),
-  base: "/vite-three/",
+  base: "./",
   build: {
     outDir: path.resolve(dirname, "dist"),
     rollupOptions: {
