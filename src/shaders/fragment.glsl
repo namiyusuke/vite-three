@@ -8,6 +8,10 @@
   uniform float uVelo;
   uniform vec2 resolution;
 
+// float random (vec2 p) {
+//     return fract(sin(dot(p.xy, vec2(12.9898,78.233)))* 43758.5453123);
+// }
+
   	float circle(vec2 uv, vec2 disc_center, float disc_radius, float border_size) {
 		uv -= disc_center;
 		uv*=resolution;
@@ -27,10 +31,10 @@
     (vUv.y - 0.5) * ratio.y + 0.5
   );
 
-    float c = circle(vUv, uMouse, 0.0, 0.4);
-    float r = texture2D(uTexture, textureUv.xy += c * (uVelo * .5)).x;
-		float g = texture2D(uTexture,textureUv.xy += c * (uVelo * .525)).y;
-		float b = texture2D(uTexture,textureUv.xy += c * (uVelo * .55)).z;
+    float c = circle(vUv, uMouse, 0.0, 0.27);
+    float r = texture2D(uTexture, textureUv.xy += c * (uVelo * 1.9)).x;
+		float g = texture2D(uTexture,textureUv.xy += c * (uVelo * 1.925)).y;
+		float b = texture2D(uTexture,textureUv.xy += c * (uVelo * 1.95)).z;
 
     color = vec4(r, g, b, 1.);
 
